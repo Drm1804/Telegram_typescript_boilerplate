@@ -1,4 +1,6 @@
-export const conf = {
+import { Config } from './config.type.js';
+
+export const conf: Config = {
   authFirebase: {
     email: '',
     password: '',
@@ -13,6 +15,5 @@ export const conf = {
     appId: '',
   },
   botToken: '',
-  storagePath: `${process.cwd()}/files/`
-}
-
+  storagePath: `${process.cwd()}/files/`,
+};

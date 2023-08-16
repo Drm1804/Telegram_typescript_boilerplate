@@ -19,5 +19,5 @@
     "noImplicitThis": false,
     "strictNullChecks": false
   },
-  "include": ["src/**/*", "__tests__/**/*", "./config_template.ts", "./config.ts"]
+  "include": ["src/**/*", "__tests__/**/*", "./config_template.ts", "./config.ts", "./config.type.ts"]
 }
