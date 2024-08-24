@@ -1,6 +1,6 @@
 {
   "name": "telegram-boilerplate",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
   "type": "module",
   "engines": {
@@ -20,7 +20,7 @@
     "rimraf": "~3.0",
     "ts-jest": "~28.0",
     "tsutils": "~3.21",
-    "typescript": "~5.2"
+    "typescript": "~5.5"
   },
   "scripts": {
     "start": "npm run build:watch",
@@ -36,8 +36,8 @@
   },
   "dependencies": {
     "firebase": "^10.5.2",
+    "grammy": "^1.29.0",
     "log4js": "^6.9.1",
-    "telegraf": "^4.15.0",
     "tslib": "~2.6.2"
   },
   "volta": {
