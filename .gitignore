@@ -28,6 +28,6 @@ build/
 # Misc
 .DS_Store
 
-config.ts
+.env
 
 files
