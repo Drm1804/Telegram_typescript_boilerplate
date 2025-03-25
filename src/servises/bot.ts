@@ -12,17 +12,17 @@ export type BotContext = Context;
 
 let bot: Bot<BotContext>;
 
-export function getBot() {
+export function getBot(): Bot<BotContext> {
   return bot;
 }
 
-async function isAdmin(ctx: BotContext, next: NextFunction) {
+async function isAdmin(ctx: BotContext, next: NextFunction): Promise<void> {
   if (ADMIN_IDS.includes(ctx.from.id)) {
     await next();
   }
 }
 
-export async function initBot(botToken: string) {
+export async function initBot(botToken: string): Promise<{ bot: Bot<BotContext> }> {
   bot = new Bot<BotContext>(botToken);
 
   bot.use(

@@ -11,6 +11,7 @@ export type Config = {
     storageBucket: string;
     messagingSenderId: string;
     appId: string;
+    measurementId: string;
   };
   botToken: string;
   storagePath: string;

@@ -14,6 +14,7 @@ export const conf: Config = {
     storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
     appId: process.env.FIREBASE_APP_ID,
+    measurementId: process.env.FB_MEASUREMENT_ID,
   },
   botToken: process.env.BOT_TOKEN,
   storagePath: `${process.cwd()}/files/`,
