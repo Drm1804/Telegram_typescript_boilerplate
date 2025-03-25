@@ -1,5 +1,5 @@
 import { Bot, Context, NextFunction, session } from 'grammy';
-import { logger } from '../helpers/logger.js';
+import { logger } from '../utils/logger.js';
 
 const ADMIN_IDS = [];
 const log = logger('Bot Service');

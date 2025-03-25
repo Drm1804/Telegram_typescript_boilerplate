@@ -1,5 +1,5 @@
 import { conf } from '../config.js';
-import { logger } from './helpers/logger.js';
+import { logger } from './utils/logger.js';
 import { initBot } from './servises/bot.js';
 
 (async (): Promise<void> => {
