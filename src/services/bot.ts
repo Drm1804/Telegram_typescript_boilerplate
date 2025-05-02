@@ -5,7 +5,7 @@ const ADMIN_IDS = [];
 const log = logger('Bot Service');
 
 export type SessionData = {
-  db: {};
+  db: Record<string, unknown>;
 };
 
 export type BotContext = Context;
@@ -18,11 +18,15 @@ export function getBot(): Bot<BotContext> {
 
 async function isAdmin(ctx: BotContext, next: NextFunction): Promise<void> {
   if (ADMIN_IDS.includes(ctx.from.id)) {
-    await next();
+    return await next();
   }
+
+  await ctx.reply('⚠️ You are not an admin.');
 }
 
-export async function initBot(botToken: string): Promise<{ bot: Bot<BotContext> }> {
+export async function initBot(
+  botToken: string,
+): Promise<{ bot: Bot<BotContext> }> {
   bot = new Bot<BotContext>(botToken);
 
   bot.use(
@@ -40,6 +44,10 @@ export async function initBot(botToken: string): Promise<{ bot: Bot<BotContext> 
   // Install the conversations plugin.
 
   //Install menus
+
+  bot.on('message', async (ctx) => {
+    ctx.reply('Hello! I am a bot. How can I help you?');
+  });
 
   bot.catch((error) => {
     console.log('bot error', error);
